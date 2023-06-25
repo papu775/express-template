@@ -2,8 +2,9 @@ const express = require('express')
 const morgan = require('morgan')
 const createError = require('http-errors')
 require('dotenv').config()
+require('./helper/init_mongodb')
 
-const AuthRoute = require('./routes/Auth.Route')
+const AuthRoute = require('./Routes/Auth.Route')
 
 const app = express()
 app.use(morgan('dev'))
